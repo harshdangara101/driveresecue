@@ -144,12 +144,29 @@ public class smokeone {
         Thread.sleep(2000);
         System.out.println("Filter Screenshot taken successfully.");
         Thread.sleep(5000);
-        driver.findElement(By.xpath("//button[@title=\"Reset\"]")).click();
+        driver.findElement(By.xpath("//button[@title='Reset']")).click();
         Thread.sleep(5000);
         
         
-        System.out.print("Harsh");
-        System.out.print("Harsh");
+        //disable activity
+        
+        driver.findElement(By.xpath("//tbody/tr[1]/td[7]/label[1]/div[1]")).click();
+        Thread.sleep(5000);
+        
+        driver.findElement(By.xpath("//tbody/tr[1]/td[7]/label[1]/div[1]")).click();
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("//tbody/tr[1]/td[8]/div[1]/ul[1]/li[1]//*[name()='svg']")).click();
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("//a[@title='Records']")).click();
+        Thread.sleep(5000);
+    //    driver.findElement('//div[@class='flex active mb-5 ml-2 ']//a[@aria-current='page']//*[name()='svg']').click;
+        
+        
+       ///////driver manager //////
+       
+        
+        
+       //driver.findElement(By.xpath("//span[normalize-space()='Driver Manager']")).click();
         
         
 	}
