@@ -149,6 +149,7 @@ public class smokeone {
         
         
         System.out.print("Harsh");
+        System.out.print("Harsh");
         
         
 	}
