@@ -153,8 +153,10 @@ public class smokeone {
         driver.findElement(By.xpath("//tbody/tr[1]/td[7]/label[1]/div[1]")).click();
         Thread.sleep(5000);
         
-        driver.findElement(By.xpath("//tbody/tr[1]/td[7]/label[1]/div[1]")).click();
+        driver.findElement(By.xpath("//button[@type='button'][contains(.,'OK')]")).click();
+        
         Thread.sleep(5000);
+        
         driver.findElement(By.xpath("//tbody/tr[1]/td[8]/div[1]/ul[1]/li[1]//*[name()='svg']")).click();
         Thread.sleep(5000);
         driver.findElement(By.xpath("//a[@title='Records']")).click();
