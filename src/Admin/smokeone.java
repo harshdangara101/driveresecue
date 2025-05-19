@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -208,6 +209,11 @@ public class smokeone {
         
         driver.findElement(By.xpath("//tbody/tr[1]/td[6]/label[1]/div[1]")).click();
         Thread.sleep(2000);
+        
+        
+        driver.findElement(By.xpath("//button[@type='button'][contains(.,'OK')]")).click();
+        
+        Thread.sleep(5000);
         driver.findElement(By.xpath("//tbody/tr[1]/td[8]/div[1]/ul[1]/li[2]//*[name()='svg']")).click();
         Thread.sleep(2000);
         driver.findElement(By.xpath("//button[@title=\"Back\"]")).click();
@@ -224,13 +230,8 @@ public class smokeone {
         
       
       //search
-        driver.findElement(By.xpath("//input[@placeholder='Search by email, name and Mobile number']")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//input[@placeholder='Search by email, name and Mobile number']")).sendKeys("tiger@mailinator.com");
-        Thread.sleep(5000);
-       
-        
-        
+        driver.findElement(By.xpath("//input[contains(@type,'search')]")).sendKeys("tiger@mailinator.com");
+        Thread.sleep(2000); 
         
         driver.findElement(By.xpath("//tbody/tr[1]/td[9]/div[1]/ul[1]/li[3]/a[1]//*[name()='svg']")).click();
         
@@ -260,9 +261,20 @@ public class smokeone {
         
         Thread.sleep(4000);
         driver.findElement(By.xpath("//button[@type='button'][contains(.,'Export CSV')]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         
-        driver.findElement(By.xpath("")).click();        
+        
+        ////service provider view details///
+        
+        driver.findElement(By.xpath("//h2[normalize-space()='Service Provider Details']")).click();  
+        Thread.sleep(3000);
+        
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        // Scroll down by 1000 pixels
+        js.executeScript("window.scrollBy(0,1000)");
+        
+     
         
       
        
