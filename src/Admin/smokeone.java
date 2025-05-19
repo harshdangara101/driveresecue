@@ -264,7 +264,7 @@ public class smokeone {
         Thread.sleep(3000);
         
         
-        ////service provider view details///
+        ////service provider view details////
         
         driver.findElement(By.xpath("//h2[normalize-space()='Service Provider Details']")).click();  
         Thread.sleep(3000);
