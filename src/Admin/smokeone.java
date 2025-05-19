@@ -157,20 +157,118 @@ public class smokeone {
         
         Thread.sleep(5000);
         
+        
+        
+        
         driver.findElement(By.xpath("//tbody/tr[1]/td[8]/div[1]/ul[1]/li[1]//*[name()='svg']")).click();
         Thread.sleep(5000);
         driver.findElement(By.xpath("//a[@title='Records']")).click();
         Thread.sleep(5000);
-    //    driver.findElement('//div[@class='flex active mb-5 ml-2 ']//a[@aria-current='page']//*[name()='svg']').click;
+  
+        
+        driver.navigate().back();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//button[@title='Back']")).click();
+        Thread.sleep(3000);
         
         
-       ///////driver manager //////
+        /////***driver manager***///
+        
+        driver.findElement(By.xpath("//span[@class='mx-1'][contains(.,'Driver Manager')]")).click();
+        Thread.sleep(2000);
+        
+        
+        //search
+        driver.findElement(By.xpath("//input[@placeholder='Search by email, name and Mobile number']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@placeholder='Search by email, name and Mobile number']")).sendKeys("driver@mailinator.com");
+        Thread.sleep(5000);
        
-       // ff
+        ///**Filter///
+
         
-       //driver.findElement(By.xpath("//span[normalize-space()='Driver Manager']")).click();
+        driver.findElement(By.xpath("//button[@title=\"Reset\"]")).click();
         
         
-	}
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@name='start_date']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//span[@aria-label='May 11, 2025']")).click();        
+       
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[contains(@name,'end_date')]")).click();
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("(//span[contains(@aria-label,'May 17, 2025')])[2]")).click();
+        
+        Thread.sleep(8000);
+        
+        ///reset///
+        driver.findElement(By.xpath("//button[@title=\"Reset\"]")).click();
+        Thread.sleep(5000);
+        
+        driver.findElement(By.xpath("//tbody/tr[1]/td[6]/label[1]/div[1]")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//tbody/tr[1]/td[8]/div[1]/ul[1]/li[2]//*[name()='svg']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@title=\"Back\"]")).click();
+        Thread.sleep(7000);
+        
+        ///export///
+        driver.findElement(By.xpath("//button[@type='button'][contains(.,'Export CSV')]")).click();
+        Thread.sleep(5000);
+        
+       ///////////////////////service provider/////////////////////////
+        
+        driver.findElement(By.xpath("//span[@class='mx-1'][contains(.,'Service Provider Manager')]")).click();
+        Thread.sleep(2000);
+        
+      
+      //search
+        driver.findElement(By.xpath("//input[@placeholder='Search by email, name and Mobile number']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@placeholder='Search by email, name and Mobile number']")).sendKeys("tiger@mailinator.com");
+        Thread.sleep(5000);
+       
+        
+        
+        
+        driver.findElement(By.xpath("//tbody/tr[1]/td[9]/div[1]/ul[1]/li[3]/a[1]//*[name()='svg']")).click();
+        
+        Thread.sleep(5000);
+        
+        
+        
+        ///**Filter///
+
+        
+        driver.findElement(By.xpath("//button[@title=\"Reset\"]")).click();
+        
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@name='start_date']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//span[@aria-label='May 11, 2025']")).click();        
+       
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[contains(@name,'end_date')]")).click();
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("(//span[contains(@aria-label,'May 17, 2025')])[2]")).click();
+        
+        Thread.sleep(8000);
+        
+        driver.findElement(By.xpath("//button[@title=\"Reset\"]")).click();
+        Thread.sleep(5000);
+        
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("//button[@type='button'][contains(.,'Export CSV')]")).click();
+        Thread.sleep(2000);
+        
+        driver.findElement(By.xpath("")).click();        
+        
+      
+        
+        
+        
+        
+        }
 
 }
