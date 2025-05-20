@@ -291,9 +291,10 @@ public class smokeone {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         // Scroll down by 1000 pixels
+        
         js.executeScript("window.scrollBy(0,1000)");
         
-     
+     //
         
      
        
