@@ -31,12 +31,20 @@ public class smokeone {
         Thread.sleep(15000);
         driver.findElement(By.xpath("//button[contains(.,'Login')]")).click();
         
+        
+        Thread.sleep(10000);
+        
+        
+        driver.findElement(By.xpath("//div[contains(@class,'block bg-gradientTo w-[220px] xl:w-[280px] fixed h-full overflow-y-auto')]//span[2]//*[name()='svg']")).click();
+        
+        /*
+        
       /////////Add Sub Admin//////
         Thread.sleep(5000);
         
         driver.findElement(By.xpath("//a[contains(.,'Subadmin Manager')]")).click();
         Thread.sleep(2000);
-       /*
+    
         driver.findElement(By.xpath("//button[@title='Add subadmin']")).click();
         Thread.sleep(2000);
         driver.findElement(By.xpath("//input[@id='firstName']")).sendKeys("Terry");
@@ -52,9 +60,9 @@ public class smokeone {
         driver.findElement(By.xpath("//input[@id='all']")).click();
         Thread.sleep(2000);
         driver.findElement(By.xpath("//button[@type='submit']")).click();
-       */
+     
         
-        //Sub Admin Search
+        //Sub Admin Search//
         
         
         Thread.sleep(2000);
@@ -173,7 +181,7 @@ public class smokeone {
         Thread.sleep(3000);
         
         
-        /////***driver manager***///
+        /////driver manager///
         
         driver.findElement(By.xpath("//span[@class='mx-1'][contains(.,'Driver Manager')]")).click();
         Thread.sleep(2000);
@@ -223,51 +231,62 @@ public class smokeone {
         driver.findElement(By.xpath("//button[@type='button'][contains(.,'Export CSV')]")).click();
         Thread.sleep(5000);
         
-       ///////////////////////service provider/////////////////////////
+        */
+       
+        //////service provider/////////
         
         driver.findElement(By.xpath("//span[@class='mx-1'][contains(.,'Service Provider Manager')]")).click();
         Thread.sleep(2000);
         
       
-      //search
+      //search//
         driver.findElement(By.xpath("//input[contains(@type,'search')]")).sendKeys("tiger@mailinator.com");
         Thread.sleep(2000); 
         
-        driver.findElement(By.xpath("//tbody/tr[1]/td[9]/div[1]/ul[1]/li[3]/a[1]//*[name()='svg']")).click();
+        
+        driver.findElement(By.xpath("//button[@type=\"button\"][@title=\"Reset\"]")).click();
+        Thread.sleep(5000);
+       // driver.findElement(By.xpath("//tbody/tr[1]/td[9]/div[1]/ul[1]/li[3]/a[1]//*[name()='svg']")).click();
         
         Thread.sleep(5000);
         
         
         
-        ///**Filter///
+        ///Filter///
 
         
-        driver.findElement(By.xpath("//button[@title=\"Reset\"]")).click();
+    
         
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         driver.findElement(By.xpath("//input[@name='start_date']")).click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         driver.findElement(By.xpath("//span[@aria-label='May 11, 2025']")).click();        
        
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         driver.findElement(By.xpath("//input[contains(@name,'end_date')]")).click();
         Thread.sleep(5000);
         driver.findElement(By.xpath("(//span[contains(@aria-label,'May 17, 2025')])[2]")).click();
         
-        Thread.sleep(8000);
-        
-        driver.findElement(By.xpath("//button[@title=\"Reset\"]")).click();
         Thread.sleep(5000);
         
-        Thread.sleep(4000);
+        driver.findElement(By.xpath("//button[@type=\"button\"][@title=\"Reset\"]")).click();
+        Thread.sleep(5000);
+        
+        
         driver.findElement(By.xpath("//button[@type='button'][contains(.,'Export CSV')]")).click();
         Thread.sleep(3000);
         
         
         ////service provider view details////
         
-        driver.findElement(By.xpath("//h2[normalize-space()='Service Provider Details']")).click();  
+        driver.findElement(By.xpath("//tbody/tr[1]/td[9]/div[1]/ul[1]/li[3]/a[1]//*[name()='svg']")).click();  
         Thread.sleep(3000);
+        
+        
+      //  driver.findElement(By.xpath("//h2[contains(.,'Service Provider Details')]")).click();
+        
+        Thread.sleep(5000);
+        
         
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -276,7 +295,7 @@ public class smokeone {
         
      
         
-      
+     
        
         
         
