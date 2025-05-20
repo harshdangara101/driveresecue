@@ -283,7 +283,7 @@ public class smokeone {
         Thread.sleep(3000);
         
         
-      //  driver.findElement(By.xpath("//h2[contains(.,'Service Provider Details')]")).click();
+      driver.findElement(By.xpath("//h2[contains(.,'Service Provider Details')]")).click();
         
         Thread.sleep(5000);
         
