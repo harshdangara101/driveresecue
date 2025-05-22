@@ -9,6 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -230,8 +231,7 @@ public class smokeone {
         ///export///
         driver.findElement(By.xpath("//button[@type='button'][contains(.,'Export CSV')]")).click();
         Thread.sleep(5000);
-        
-        */
+     
        
         //////service provider/////////
         
@@ -283,18 +283,51 @@ public class smokeone {
         Thread.sleep(3000);
         
         
-      driver.findElement(By.xpath("//h2[contains(.,'Service Provider Details')]")).click();
+    //  driver.findElement(By.xpath("//h2[contains(.,'Service Provider Details')]")).click();
+        
+       Thread.sleep(5000);
+        
+        
+       // WebElement scrollableDiv = driver.findElement(By.xpath("///div[contains(@class,'max-h-[770px] overflow-y-auto p-6 md:p-10')]')]"));
+
+       // JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        // Scroll down 200 pixels inside the scrollable div
+     
+       // js.executeScript("arguments[0].scrollTop = arguments[0].scrollTop + 200;", scrollableDiv);
+        
+
+        driver.findElement(By.xpath("//button[@title='Back']")).click();
+        Thread.sleep(3000);
+           */
+        
+        //offer manager//
         
         Thread.sleep(5000);
         
+        driver.findElement(By.xpath("//a[contains(.,'Offer Manager')]")).click();
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("//a[@type='button'][contains(.,'Add Offer')]")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//input[contains(@name,'name')]")).click();
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("//div[text()='Select Type']")).click();
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("//div[text()='Percentage']")).click();
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("//input[@id='value']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//input[contains(@class,'18px] bg-no-repeat flex flex-row-reverse outline-none text-gray-900 text-sm rounded-lg block w-full p-2 py-[11px] px-3 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 flatpickr-input active')]']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//span[@aria-label='May 22, 2025'][1]")).click();
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("//input[contains(@class,'18px] bg-no-repeat flex flex-row-reverse outline-none text-gray-900 text-sm rounded-lg block w-full p-2 py-[11px] px-3 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 flatpickr-input active')]")).click();
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("//span[@aria-label='May 29, 2025'][1]")).click();
+        Thread.sleep(4000);
         
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-
-        // Scroll down by 1000 pixels
         
-        js.executeScript("window.scrollBy(0,1000)");
-        
-     //
+        driver.findElement(By.xpath("//input[contains(@name,'code')]")).click();
         
      
        
